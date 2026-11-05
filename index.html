@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"
+    />
+    <meta name="theme-color" content="#b7e7df" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Toba's Little World</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <button id="home" aria-label="Home"></button>
+        <div class="brand">Toba’s <span>little world</span></div>
+        <button id="speaker" aria-label="Hear the guidance again"></button
+        ><button
+          id="parents"
+          aria-label="Grown-ups: hold for two seconds"
+        ></button>
+      </header>
+      <main id="scene"></main>
+      <div id="effects" aria-hidden="true"></div>
+      <div id="ghost" hidden></div>
+      <dialog id="panel"></dialog>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Toba’s Little World",
+  "short_name": "Toba’s World",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff9ec",
+  "theme_color": "#b7e7df",
+  "description": "A little world of gentle play, made for Toba.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
