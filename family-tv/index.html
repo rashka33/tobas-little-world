@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Family TV — Beerta Xayawaanka</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0b1020; color: #fff6e6; font-family: Arial, Helvetica, sans-serif; min-height: 100vh; }
+  header { text-align: center; padding: 28px 16px 8px; }
+  header h1 { font-size: 40px; color: #ffd24a; }
+  header p { font-size: 20px; opacity: .85; margin-top: 6px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 18px; }
+  .card { background: #141b36; border: 3px solid #26315e; border-radius: 22px; padding: 18px; }
+  .card h2 { font-size: 30px; margin-bottom: 12px; }
+  .card h2 .so { color: #7ee0a3; }
+  video { width: 100%; border-radius: 14px; background: #000; outline: none; }
+  video:focus { outline: 5px solid #ffd24a; }
+  .bigplay { display: block; width: 100%; margin-top: 14px; padding: 20px; font-size: 30px; font-weight: bold;
+             background: #ff7a1a; color: #14100a; border: none; border-radius: 16px; cursor: pointer; }
+  .bigplay:focus { outline: 5px solid #ffd24a; }
+  .soon { text-align: center; font-size: 20px; opacity: .75; padding: 22px 10px 30px; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>🦁 Our Family TV</h1>
+    <p>Only our family's videos — nothing else lives here.</p>
+  </header>
+  <div class="wrap">
+    <div class="card">
+      <h2>Episode 1: The Zoo Trip · <span class="so">Maalintii Beerta Xayawaanka</span></h2>
+      <video id="ep1" controls preload="metadata" playsinline poster="" src="https://muse.ai/files/659723920550967/1775176470204315/r24ieunemr0gjjdfn8y2k7rp/episode1.mp4"></video>
+      <button class="bigplay" id="playbtn">▶ PLAY EPISODE 1</button>
+    </div>
+    <p class="soon">More episodes will appear here as we make them. 🎬</p>
+  </div>
+<script>
+  var v = document.getElementById('ep1');
+  var b = document.getElementById('playbtn');
+  b.addEventListener('click', function () {
+    if (v.paused) { v.play(); b.textContent = '⏸ PAUSE'; }
+    else { v.pause(); b.textContent = '▶ PLAY EPISODE 1'; }
+  });
+  v.addEventListener('play', function () { b.textContent = '⏸ PAUSE'; });
+  v.addEventListener('pause', function () { b.textContent = '▶ PLAY EPISODE 1'; });
+  window.addEventListener('load', function () { b.focus(); });
+</script>
+</body>
+</html>
