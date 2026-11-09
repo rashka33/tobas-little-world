@@ -8,18 +8,19 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #0b1020; color: #fff6e6; font-family: Arial, Helvetica, sans-serif; min-height: 100vh; }
-  header { text-align: center; padding: 28px 16px 8px; }
-  header h1 { font-size: 40px; color: #ffd24a; }
+  header { text-align: center; padding: 30px 16px 6px; }
+  header h1 { font-size: 42px; color: #ffd24a; }
   header p { font-size: 20px; opacity: .85; margin-top: 6px; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 18px; }
-  .card { background: #141b36; border: 3px solid #26315e; border-radius: 22px; padding: 18px; }
-  .card h2 { font-size: 30px; margin-bottom: 12px; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .card { background: #141b36; border: 3px solid #26315e; border-radius: 22px; padding: 26px 20px; text-align: center; }
+  .poster { font-size: 110px; line-height: 1.1; }
+  .card h2 { font-size: 32px; margin: 10px 0 4px; }
   .card h2 .so { color: #7ee0a3; }
-  video { width: 100%; border-radius: 14px; background: #000; outline: none; }
-  video:focus { outline: 5px solid #ffd24a; }
-  .bigplay { display: block; width: 100%; margin-top: 14px; padding: 20px; font-size: 30px; font-weight: bold;
-             background: #ff7a1a; color: #14100a; border: none; border-radius: 16px; cursor: pointer; }
-  .bigplay:focus { outline: 5px solid #ffd24a; }
+  .card .len { font-size: 19px; opacity: .8; margin-bottom: 20px; }
+  a.bigplay { display: block; padding: 26px 16px; font-size: 34px; font-weight: bold; text-decoration: none;
+              background: #ff7a1a; color: #14100a; border-radius: 18px; }
+  a.bigplay:focus { outline: 6px solid #ffd24a; }
+  .hint { font-size: 17px; opacity: .75; margin-top: 16px; }
   .soon { text-align: center; font-size: 20px; opacity: .75; padding: 22px 10px 30px; }
 </style>
 </head>
@@ -30,22 +31,16 @@
   </header>
   <div class="wrap">
     <div class="card">
+      <div class="poster">🦁🐒🐪🐘</div>
       <h2>Episode 1: The Zoo Trip · <span class="so">Maalintii Beerta Xayawaanka</span></h2>
-      <video id="ep1" controls preload="metadata" playsinline poster="" src="https://muse.ai/files/659723920550967/1775176470204315/r24ieunemr0gjjdfn8y2k7rp/episode1.mp4"></video>
-      <button class="bigplay" id="playbtn">▶ PLAY EPISODE 1</button>
+      <p class="len">3 minutes · the whole family at the zoo</p>
+      <a class="bigplay" id="playbtn" href="https://muse.ai/files/659723920550967/1775176470204315/r24ieunemr0gjjdfn8y2k7rp/episode1.mp4">▶ PLAY EPISODE 1</a>
+      <p class="hint">The video opens full-screen. Use the player's own buttons to pause, go back or forward 10 seconds, or send it to the TV.</p>
     </div>
     <p class="soon">More episodes will appear here as we make them. 🎬</p>
   </div>
 <script>
-  var v = document.getElementById('ep1');
-  var b = document.getElementById('playbtn');
-  b.addEventListener('click', function () {
-    if (v.paused) { v.play(); b.textContent = '⏸ PAUSE'; }
-    else { v.pause(); b.textContent = '▶ PLAY EPISODE 1'; }
-  });
-  v.addEventListener('play', function () { b.textContent = '⏸ PAUSE'; });
-  v.addEventListener('pause', function () { b.textContent = '▶ PLAY EPISODE 1'; });
-  window.addEventListener('load', function () { b.focus(); });
+  window.addEventListener('load', function () { document.getElementById('playbtn').focus(); });
 </script>
 </body>
 </html>
